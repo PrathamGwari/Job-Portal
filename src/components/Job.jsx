@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 
 function Job(props) {
     const { id, title, companyName, location} = props;
-    const {selectedJobId} = props;
     const imgSrc = `https://logo.clearbit.com/${companyName}.com`;
     
     const clickHandle = ()=>{
@@ -35,15 +34,10 @@ function Job(props) {
         </>
     )
 }
-const mapStateToProps = (state)=>{
-    return {
-        selectedJobId: state.selectJobId
-    }
-}
 
 const mapDispatchToProps = (dispatch)=>{
     return {
         selectJobId: (newId) =>{ dispatch({type:'SELECT_JOB_ID', payload: newId})}
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Job)
+export default connect(null, mapDispatchToProps)(Job)

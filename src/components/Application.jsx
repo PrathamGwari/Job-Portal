@@ -4,19 +4,8 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 function Application(props) {
-    const {jobData, applicationDetails} = props;
-    console.log(jobData);
-    const data = [{
-        title: 'Senior Software Developer Java',
-        location:{
-            area:['India', 'Delhi', 'Gurugram']
-        },
-        company: {
-            display_name: 'amazon'
-        },
-        id: '12345',
-        description: 'IDinsight is a mission-driven global advisory, data analytics, and research organization that helps global development leaders maximize their social impact. We tailor a wide range of data and evidence tools, including machine learning, to help decision-makers design effective programs and rigorously test what works to support communities.'
-    }] 
+    const {jobData} = props;
+
     const submitApplicationOnClick = async ()=>{
         console.log('submitting');
         if(document.getElementById('resume-input').files.length !== 0){
@@ -79,7 +68,6 @@ function Application(props) {
 const mapPropsToState = (state)=>{
     return {
         jobData: state.jobData,
-        applicationDetails: state.applicationDetails,
     }
 }
 const mapDispatchToState = (dispatch)=>{

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {Route} from 'react-router-dom'
+import {Route, Redirect} from 'react-router-dom'
 
 function ProtectedRegister(props) {
     const {isAuthenticated, component: Component,...rest} = props;
@@ -11,7 +11,7 @@ function ProtectedRegister(props) {
                 <Component></Component>
             ):
             (
-                <Component></Component>
+                <Redirect to="/jobs"/>
             )}
         />
     )

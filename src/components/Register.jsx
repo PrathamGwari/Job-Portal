@@ -1,6 +1,5 @@
 import React from 'react'
 import Cookies from 'js-cookie'
-import {Link} from 'react-router-dom'
 import { connect } from 'react-redux';
 import './components.css'
 
@@ -20,7 +19,6 @@ function Register(props) {
                 <input className='form-control my-4 py-3' type="email" placeholder='Email' id='email-input'/>
                 <input className='form-control my-4 py-3' type="password" placeholder='Password' id='password-input'/>
                 <button className='form-control btn btn-lg btn-success my-4' onClick={registerUser}>Register</button>
-                {/* <Link to="/login"><button className='form-control btn btn-lg btn-dark my-2'>Login</button></Link> */}
             </div>  
         </>
     )

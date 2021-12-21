@@ -15,9 +15,7 @@ function JobDescription(props) {
             }
         });
         
-        // console.log(res.data.results);
         props.changeData(res.data.results);
-        console.log(jobData[0]);
     }
 
     useEffect(() => {

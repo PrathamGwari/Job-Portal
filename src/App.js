@@ -5,11 +5,12 @@ import SuccessfulSubmit from './components/SuccessfulSubmit';
 import ProtectedLogin from './components/ProtectedLogin';
 import ProtectedRoute from './components/ProtectedRoute';
 import ProtectedRegister from './components/ProtectedRegister';
+
 import Login from './components/Login';
 import Register from './components/Register';
 import Navbar from './components/Navbar';
 
-import { BrowserRouter as Router , Route, Switch, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router , Route, Switch} from 'react-router-dom';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducers/rootReducer';
@@ -24,17 +25,11 @@ function App() {
         <Navbar/>
         <Switch>
           <ProtectedLogin exact path="/login" component={Login}/>
-          <Route exact path="/register"><Register/></Route>
+          <ProtectedRegister exact path="/register" component={Register}/>
           <ProtectedRoute exact path="/jobs" component={Home}/>
           <ProtectedRoute exact path="/jobs/description" component={JobDescription}/>
           <ProtectedRoute exact path="/jobs/apply" component={Application}/>
           <ProtectedRoute exact path="/jobs/submit" component={SuccessfulSubmit}/>
-          
-
-          {/* <Route exact path="/jobs"><Home/></Route>
-          <Route path="/jobs/description"><JobDescription/></Route>
-          <Route path="/jobs/apply"><Application/></Route>
-          <Route path="/jobs/submit"><SuccessfulSubmit/></Route> */}
         </Switch>
       </Router>
     </Provider>
