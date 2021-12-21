@@ -10,7 +10,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Navbar from './components/Navbar';
 
-import { BrowserRouter as Router , Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router , Redirect, Switch} from 'react-router-dom';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducers/rootReducer';
@@ -30,6 +30,7 @@ function App() {
           <ProtectedRoute exact path="/jobs/description" component={JobDescription}/>
           <ProtectedRoute exact path="/jobs/apply" component={Application}/>
           <ProtectedRoute exact path="/jobs/submit" component={SuccessfulSubmit}/>
+          <Redirect to="/jobs"/>
         </Switch>
       </Router>
     </Provider>
