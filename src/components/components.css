@@ -1,0 +1,86 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+.bg-light{
+    background-color: rgb(241, 241, 241) !important;
+}
+.heading{
+    display: block;
+    font-size: 1.5rem !important;
+    padding-left: 3rem;
+}
+.language-name-container{
+    font-size: 1.7rem !important;
+    padding-left: 1.3rem;
+    cursor: pointer;
+}
+.language-container{
+    justify-content: center !important;
+}
+.job-container{
+    height: 90vh !important;
+    overflow-y: scroll;
+}
+
+/* Job component css */
+.company-image{
+    width: 4rem;
+    height: auto;
+}
+
+.job-title{
+    font-size: 1.5rem;
+}
+
+.text-area{
+    height: 8rem;
+}
+
+.preview-heading{
+    font-size: 1.7rem;
+}
+.preview-content{
+    font-size: 1.5rem;
+}
+.form-container{
+    margin-left: 8rem !important;
+    margin-right: 8rem !important;
+}
+/* tablet view */
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .language-name-container{
+        font-size: 1.1rem !important;
+        padding-left: 1.3rem;
+    }
+}
+/* mobile view */
+@media all and (min-width: 320px) and (max-width: 375px){
+    .language-name-container{
+        font-size: 1.5rem !important;
+        padding-left: 1.3rem;
+    }
+    .company-image{
+        width: 4rem;
+        height: auto;
+    }
+    .form-container{
+        margin-left: .2rem !important;
+        margin-right: .2rem !important;
+    }
+}
+
+/* for laptops and above */
+@media all and (min-width: 768px){
+    .form-container{
+        margin-left: 20rem !important;
+        margin-right: 20rem !important;
+    }
+}
+
+@media all and (min-width: 320px) and (max-width: 768px){
+    .form-container{
+        margin-left: 8rem !important;
+        margin-right: 8rem !important;
+    }
+}
