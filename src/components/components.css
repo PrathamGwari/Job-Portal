@@ -70,17 +70,18 @@ a{
     }
 }
 
-/* for laptops and above */
-@media all and (min-width: 768px){
+/* for tablets */
+@media all and (min-width: 425px) and (max-width: 768px){
     .form-container{
-        margin-left: 20rem !important;
-        margin-right: 20rem !important;
+        margin-left: 2rem !important;
+        margin-right: 2rem !important;
     }
 }
 
-@media all and (min-width: 320px) and (max-width: 768px){
+/* for laptops and above */
+@media all and (min-width: 780px){
     .form-container{
-        margin-left: 8rem !important;
-        margin-right: 8rem !important;
+        margin-left: 20rem !important;
+        margin-right: 20rem !important;
     }
 }
